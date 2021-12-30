@@ -1,0 +1,122 @@
+body {
+  background-color: #E8F6EF;
+  font-family: 'Josefin Sans', sans-serif;
+}
+h1{
+  text-align: center;
+  color: #4C4C6D;
+  font-size: 2em;
+}
+.App{
+  display: grid;
+  grid-template-columns: repeat(1,20rem);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1rem;
+}
+.outerbox{
+  background-color: #B8DFD8;
+  display: grid;
+  grid-template-columns: repeat(4,4rem);
+  grid-template-rows:minmax(5rem,auto) repeat(5, 4rem); /* min height is 7rem and max is auto that is depend on content */
+  grid-gap: 5px;
+  justify-content:center;
+  padding: 20px 0;
+  padding-bottom:30px;
+  border-radius:7px;
+}
+.inputArea{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.upper{
+  font-size: 1.2rem;
+  color:#5EC5B2;
+  font-weight:500;
+}
+.lower{
+  font-size:2rem;
+  color:#1C9D86;
+  font-weight:600;
+  padding: 10px 0;
+}
+button{
+  background-color: #4C4C6D;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight:600;
+  color: #FFE194;
+}
+button:hover , button:focus{
+  background-color: #77779b;
+}
+.equalSign{
+  grid-column-start: -3;
+  grid-column-end: -1;
+}
+@media (max-width: 750px) and (min-width: 450px) {
+  h1{
+    font-size:1.6rem;
+  }
+  .App{
+    grid-template-columns: repeat(1,16rem);
+  }
+  .outerbox{
+    grid-template-columns: repeat(4,3rem);
+    grid-template-rows:minmax(4rem,auto) repeat(5, 3rem); /* min height is 7rem and max is auto that is depend on content */
+    grid-gap: 4px;
+    padding: 12px 0;
+    padding-bottom:20px;
+    border-radius:6px;
+  }
+  .upper{
+    font-size: 0.8rem;
+    font-weight:400;
+  }
+  .lower{
+    font-size:1.6rem;
+    font-weight:500;
+    padding: 7px 0;
+  }
+  button{
+    font-size: 1rem;
+    font-weight:500;
+  }
+}
+@media (max-width: 450px) {
+  h1{
+    font-size:1.3rem;
+  }
+  .App{
+    grid-template-columns: repeat(1,12rem);
+  }
+  .outerbox{
+    grid-template-columns: repeat(4,2.3rem);
+    grid-template-rows:minmax(2.8rem,auto) repeat(5, 2.3rem); /* min height is 7rem and max is auto that is depend on content */
+    grid-gap: 2px;
+    padding: 10px 0;
+    padding-bottom:16px;
+    border-radius:4px;
+  }
+  .upper{
+    font-size: 0.6rem;
+    font-weight:300;
+  }
+  .lower{
+    font-size:1.3rem;
+    font-weight:400;
+    padding: 5px 0;
+  }
+  button{
+    font-size: 0.8rem;
+    font-weight:400;
+  }
+}
